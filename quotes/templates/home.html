@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block sidebar %}
+<div class="person-info">
+    <img src="{{ STATIC_URL }}bgnarrow.png">
+</div>
+{% endblock sidebar %}
+
+{% block content %}
+<div class="bubble">
+<div class="bubbleleft">
+<div class="bubbleright">
+<div class="bubbletop">
+<div class="bubblebottom">
+    <div class="roundtop">
+        <img src="{{ STATIC_URL }}bubble/bubble-top-left.png" class="corner" />
+    </div>
+
+    <p>
+    {{ quote.quote }} - {{ quote.speaker }}
+    </p>
+    
+    <div class="roundbottom">
+        <a style="margin-left: 30px;" href="/quotes/{{ quote.id }}/">permalink</a>
+        <img src="{{ STATIC_URL }}bubble/bubble-bottom-left.png" class="corner" />
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="nextlink">
+    <a href="/">Next quote &gt;&gt;</a>
+</div>
+<div class="nextlink">
+    <a href="/facts/submit/">Add a quote &gt;&gt;</a>
+</div>
+{% endblock content %}

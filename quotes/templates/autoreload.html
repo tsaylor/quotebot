@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+
+{% block header %}
+<script language="Javascript">
+    function reload() {
+        location = "/r/";
+    }
+    setTimeout("reload()", 15000);
+</script>
+{% endblock header %}
